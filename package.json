@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/Kennedy-Mutuku/RIKURUMA-PENTECOSTAL-CHURCH-NYAMIRA-Back-End#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
     "dotenv": "^16.4.5",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.5",
     "nodemon": "^3.1.11"
   }

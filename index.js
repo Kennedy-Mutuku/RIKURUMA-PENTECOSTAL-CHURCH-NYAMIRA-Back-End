@@ -11,14 +11,18 @@ app.use(cors());
 app.use(express.json());
 
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/auth');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/kingdom_enlightenment')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/rikuruma_church')
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
+// Routes
+app.use('/api/auth', authRoutes);
+
 app.get('/', (req, res) => {
-  res.send('Kingdom Enlightenment Missions Team Backend is running!');
+  res.send('Rikuruma Pentecostal Church Backend is running!');
 });
 
 app.listen(PORT, () => {
